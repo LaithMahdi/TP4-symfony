@@ -15,7 +15,11 @@
         <tr>
             <td>{{ article.nom }}</td>
             <td>{{ article.prix }}</td>
-            <td><a href="/article/{{ article.id }}" class="btn btn-dark">Détails</a></td>
+            <td>
+                <a href="/article/{{ article.id }}" class="btn btn-dark">Détails</a>
+                <a href="/article/edit/{{ article.id }}" class="btn btn-dark">Modifier</a>
+                <a href="/article/delete/{{ article.id }}" class="btn btn-danger"onclick="return confirm('Etesvous sûr de supprimer cet article?');">Supprimer</a>
+            </td>
         </tr>
         {% endfor %}
     </tbody>
